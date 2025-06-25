@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ENSEMBL AI - Your Personal AI Stylist</title>
+    <title>ENSEMBL AI - Look Great Every Day Without the Stress</title>
     <style>
         * {
             margin: 0;
@@ -15,57 +15,18 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
             overflow-x: hidden;
+            background-color: #E4DEE1;
+            color: #0E0300;
         }
 
         /* Animated gradient background */
         .hero {
             min-height: 100vh;
-            background: linear-gradient(-45deg, #667eea, #764ba2, #f093fb, #f5576c, #4facfe, #00f2fe);
-            background-size: 400% 400%;
-            animation: gradientShift 15s ease infinite;
+            background: #E4DEE1;
             display: flex;
             align-items: center;
             position: relative;
             overflow: hidden;
-        }
-
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        /* Floating particles */
-        .particles {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-        }
-
-        .particle {
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            background: rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
-            animation: float 6s ease-in-out infinite;
-        }
-
-        .particle:nth-child(1) { left: 10%; animation-delay: 0s; }
-        .particle:nth-child(2) { left: 20%; animation-delay: 1s; }
-        .particle:nth-child(3) { left: 30%; animation-delay: 2s; }
-        .particle:nth-child(4) { left: 40%; animation-delay: 3s; }
-        .particle:nth-child(5) { left: 50%; animation-delay: 4s; }
-        .particle:nth-child(6) { left: 60%; animation-delay: 5s; }
-        .particle:nth-child(7) { left: 70%; animation-delay: 0.5s; }
-        .particle:nth-child(8) { left: 80%; animation-delay: 1.5s; }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
-            10% { opacity: 1; }
-            90% { opacity: 1; }
-            100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
         }
 
         .container {
@@ -84,12 +45,13 @@
         }
 
         .hero-text {
-            color: white;
+            color: #0E0300;
             animation: slideInLeft 1s ease-out;
         }
 
         .hero-text h1 {
             font-size: 4rem;
+            color: #640D14;
             font-weight: 800;
             margin-bottom: 20px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
@@ -155,11 +117,10 @@
             position: relative;
             width: 300px;
             height: 600px;
-            background: linear-gradient(145deg, #2d3748, #4a5568);
+            background: #0E0300;
             border-radius: 40px;
             padding: 20px;
             box-shadow: 0 25px 50px rgba(0,0,0,0.3);
-            animation: float-phone 6s ease-in-out infinite;
         }
 
         .phone-screen {
@@ -178,11 +139,6 @@
             border-radius: 30px;
         }
 
-        @keyframes float-phone {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-        }
-
         @keyframes slideInLeft {
             from { transform: translateX(-100px); opacity: 0; }
             to { transform: translateX(0); opacity: 1; }
@@ -196,8 +152,8 @@
         /* Features Section */
         .features {
             padding: 100px 0;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            background: #E4DEE1;
+            color: #0E0300;
         }
 
         .features-grid {
@@ -208,11 +164,10 @@
         }
 
         .feature-card {
-            background: rgba(255, 255, 255, 0.1);
+            background: #ffffff;
             padding: 40px 30px;
             border-radius: 20px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid #0E0300;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
@@ -224,7 +179,8 @@
         .feature-icon {
             width: 60px;
             height: 60px;
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            background: #042038;
+            color: #E4DEE1;
             border-radius: 15px;
             display: flex;
             align-items: center;
@@ -251,8 +207,8 @@
         /* How it works section */
         .how-it-works {
             padding: 100px 0;
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            color: white;
+            background: #042038;
+            color: #E4DEE1;
         }
 
         .steps {
@@ -285,7 +241,7 @@
         /* CTA Section */
         .cta {
             padding: 100px 0;
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            background: #640D14;
             text-align: center;
             color: white;
         }
@@ -334,29 +290,18 @@
 <body>
     <!-- Hero Section -->
     <section class="hero">
-        <div class="particles">
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-        </div>
-        
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
                     <h1>ENSEMBL AI</h1>
-                    <p class="tagline">Your Personal AI Stylist</p>
-                    <p class="description">Complete your outfit instantly! Upload your garments, choose what you need, and let ENSEMBL find your perfect match to buy!</p>
+                    <p class="tagline">Never Wonder "Does This Match?" Again</p>
+                    <p class="description">Feel confident and stylish every day. ENSEMBL takes the stress out of getting dressed by finding the perfect pieces to complete your outfits - so you can focus on conquering your day.</p>
                     
                     <a href="#" class="download-btn" onclick="downloadApp()">
                         <div class="app-icon">
                             <img src="logo1.png" alt="ENSEMBL Logo" style="width: 100%; height: 100%; object-fit: contain;">
                         </div>
-                        Get ENSEMBL AI Now
+                        End Outfit Anxiety Today
                     </a>
                 </div>
                 
@@ -367,7 +312,7 @@
                                 ENSEMBL
                             </div>-->
                             <div class="phone-screen">
-                                <img src="screenshot1.png" alt="ENSEMBL App Screenshot" class="screenshot">
+                                <img src="screenshot1.jpg" alt="ENSEMBL App Screenshot" class="screenshot">
                             </div>
                         </div>
                     </div>
@@ -380,25 +325,25 @@
     <section class="how-it-works">
         <div class="container">
             <h2 class="section-title">How ENSEMBL Works</h2>
-            <p class="section-subtitle">Three simple steps to discover your perfect outfit companion</p>
+            <p class="section-subtitle">From outfit anxiety to style confidence in 3 simple steps</p>
             
             <div class="steps">
                 <div class="step">
                     <div class="step-number">1</div>
-                    <h3>Show Us Your Style</h3>
-                    <p>Simply snap or upload photos of your current outfit pieces – like that favorite t-shirt and your go-to sneakers.</p>
+                    <h3>Share Your Style Dilemma</h3>
+                    <p>That moment when you're staring at your closet, loving that new shirt but stuck on what to wear with it? Just snap a photo.</p>
                 </div>
                 
                 <div class="step">
                     <div class="step-number">2</div>
-                    <h3>Tell Us What You Need</h3>
-                    <p>Let ENSEMBL know what you're looking to buy – perhaps a new pair of trousers, a stylish jacket, or the perfect skirt.</p>
+                    <h3>Tell Us What's Missing</h3>
+                    <p>Love that t-shirt and trousers combo but need the perfect shoes? Just let us know what piece you need, and we'll find options that tie your whole look together.</p>
                 </div>
                 
                 <div class="step">
                     <div class="step-number">3</div>
-                    <h3>Discover Your Match</h3>
-                    <p>Our intelligent engine analyzes your items for style, color, and compatibility, then presents curated selections available for purchase.</p>
+                    <h3>Feel That Perfect-Outfit Confidence</h3>
+                    <p>Get curated suggestions that actually work. No more buyer's remorse, no more "it looked good online" disappointments.</p>
                 </div>
             </div>
         </div>
@@ -407,44 +352,44 @@
     <!-- Features Section -->
     <section class="features">
         <div class="container">
-            <h2 class="section-title">Key Features</h2>
-            <p class="section-subtitle">Unlock the secret to perfectly coordinated outfits</p>
+            <h2 class="section-title">Life With ENSEMBL</h2>
+            <p class="section-subtitle">Because you have better things to worry about than matching colors</p>
             
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon">🧠</div>
-                    <h3>Smart Matching Technology</h3>
-                    <p>Our algorithm understands fashion, helping you find pieces that truly complement your style.</p>
+                    <div class="feature-icon">😌</div>
+                    <h3>Morning Confidence Boost</h3>
+                    <p>Start every day knowing you look put-together. No more second-guessing or changing outfits three times before leaving.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">💸</div>
+                    <h3>End Shopping Regret</h3>
+                    <p>Stop wasting money on clothes that sit unworn. Buy pieces you'll actually love wearing because they work with what you have.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⏰</div>
+                    <h3>Get Your Mornings Back</h3>
+                    <p>Reclaim those precious minutes spent agonizing over outfits. More time for coffee, less time for wardrobe crises.</p>
                 </div>
                 
                 <div class="feature-card">
                     <div class="feature-icon">✨</div>
-                    <h3>Shop with Confidence</h3>
-                    <p>No more guessing! Buy items knowing they'll look great with what you already have.</p>
+                    <h3>Compliments Guaranteed</h3>
+                    <p>"Where did you get that?" becomes your new normal. Look effortlessly stylish without the effort.</p>
                 </div>
                 
                 <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h3>Save Time & Reduce Frustration</h3>
-                    <p>Stop endless scrolling and find what you need quickly.</p>
+                    <div class="feature-icon">🎯</div>
+                    <h3>Shop With Purpose</h3>
+                    <p>No more endless scrolling through sites hoping something catches your eye. Find exactly what you need, when you need it.</p>
                 </div>
                 
                 <div class="feature-card">
-                    <div class="feature-icon">🎨</div>
-                    <h3>Discover New Styles & Brands</h3>
-                    <p>Get inspired by recommendations you might not have found on your own.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">📱</div>
-                    <h3>Easy & Intuitive</h3>
-                    <p>A simple, user-friendly interface makes finding your next favorite piece a breeze.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">💡</div>
-                    <h3>Smart Recommendations</h3>
-                    <p>Whether for everyday style or special occasions, ENSEMBL helps you make smarter shopping decisions.</p>
+                    <div class="feature-icon">🌟</div>
+                    <h3>Discover Your Perfect Style</h3>
+                    <p>Find amazing pieces you never knew existed. ENSEMBL introduces you to brands and styles that perfectly match your aesthetic.</p>
                 </div>
             </div>
         </div>
@@ -456,14 +401,14 @@
     <!-- CTA Section -->
     <section class="cta">
         <div class="container">
-            <h2>Start Building Your Dream Wardrobe</h2>
-            <p>Download ENSEMBL today and find your perfect piece, one match at a time!</p>
+            <h2>Ready to Love Getting Dressed Again?</h2>
+            <p>Join thousands who've transformed their daily struggle into effortless style</p>
             
             <a href="#" class="download-btn" onclick="downloadApp()">
                 <div class="app-icon">
                     <img src="logo1.png" alt="ENSEMBL Logo" style="width: 100%; height: 100%; object-fit: contain;">
                 </div>
-                Get ENSEMBL AI Now
+                Start Your Style Journey
             </a>
         </div>
     </section>
