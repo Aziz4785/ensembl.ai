@@ -72,6 +72,18 @@
             line-height: 1.7;
         }
 
+        .download-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .store-badge {
+            height: 54px;
+        }
+
         .download-btn {
             display: inline-flex;
             align-items: center;
@@ -295,14 +307,19 @@
                 <div class="hero-text">
                     <h1>ENSEMBL AI</h1>
                     <p class="tagline">Never Wonder "Does This Match?" Again</p>
-                    <p class="description">Feel confident and stylish every day. ENSEMBL takes the stress out of getting dressed by finding the perfect pieces to complete your outfits - so you can focus on conquering your day.</p>
+                    <p class="description">Feel confident and stylish every day. <strong>Powered by cutting-edge AI, ENSEMBL analyzes your clothes to recommend the perfect pieces that complete your outfit</strong> – so you can focus on conquering your day.</p>
                     
-                    <a href="#" class="download-btn" onclick="downloadApp()">
-                        <div class="app-icon">
-                            <img src="logo1.png" alt="ENSEMBL Logo" style="width: 100%; height: 100%; object-fit: contain;">
-                        </div>
-                        End Outfit Anxiety Today
-                    </a>
+                    <div class="download-wrapper">
+                        <a href="#" class="download-btn" onclick="downloadApp()">
+                            <div class="app-icon">
+                                <img src="logo1.png" alt="ENSEMBL Logo" style="width: 100%; height: 100%; object-fit: contain;">
+                            </div>
+                            End Outfit Anxiety Today
+                        </a>
+                        <a href="#" onclick="downloadApp()">
+                            <img src="appstore.svg" alt="Download on the App Store" class="store-badge">
+                        </a>
+                    </div>
                 </div>
                 
                 <div class="hero-visual">
@@ -345,6 +362,12 @@
                     <h3>Feel That Perfect-Outfit Confidence</h3>
                     <p>Get curated suggestions that actually work. No more buyer's remorse, no more "it looked good online" disappointments.</p>
                 </div>
+            </div>
+            <!-- App Store Badge -->
+            <div class="download-wrapper" style="justify-content: center; margin-top: 40px;">
+                <a href="#" onclick="downloadApp()">
+                    <img src="appstore.svg" alt="Download on the App Store" class="store-badge">
+                </a>
             </div>
         </div>
     </section>
@@ -394,9 +417,11 @@
             </div>
         </div>
     </section>
-    <a href="contact.html" class="download-btn" style="margin: 40px auto 0 auto; display: inline-flex;">
-        Contact Me
-    </a>
+    <div style="display: flex; justify-content: center; margin: 40px 0 0;">
+        <a href="contact.html" class="download-btn">
+            Contact Us
+        </a>
+    </div>
 
     <!-- CTA Section -->
     <section class="cta">
@@ -404,12 +429,17 @@
             <h2>Ready to Love Getting Dressed Again?</h2>
             <p>Join thousands who've transformed their daily struggle into effortless style</p>
             
-            <a href="#" class="download-btn" onclick="downloadApp()">
-                <div class="app-icon">
-                    <img src="logo1.png" alt="ENSEMBL Logo" style="width: 100%; height: 100%; object-fit: contain;">
-                </div>
-                Start Your Style Journey
-            </a>
+            <div class="download-wrapper" style="justify-content: center;">
+                <a href="#" class="download-btn" onclick="downloadApp()">
+                    <div class="app-icon">
+                        <img src="logo1.png" alt="ENSEMBL Logo" style="width: 100%; height: 100%; object-fit: contain;">
+                    </div>
+                    Start Your Style Journey
+                </a>
+                <a href="#" onclick="downloadApp()">
+                    <img src="appstore.svg" alt="Download on the App Store" class="store-badge">
+                </a>
+            </div>
         </div>
     </section>
 
