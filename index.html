@@ -15,14 +15,15 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
             overflow-x: hidden;
-            background-color: #E4DEE1;
+            background-color: #F5F5F4;
             color: #0E0300;
+            padding-top: 80px;
         }
 
         /* Animated gradient background */
         .hero {
             min-height: 100vh;
-            background: #E4DEE1;
+            background: #F5F5F4;
             display: flex;
             align-items: center;
             position: relative;
@@ -50,6 +51,7 @@
         }
 
         .hero-text h1 {
+            font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
             font-size: 4rem;
             color: #640D14;
             font-weight: 800;
@@ -164,7 +166,7 @@
         /* Features Section */
         .features {
             padding: 100px 0;
-            background: #E4DEE1;
+            background: #F5F5F4;
             color: #0E0300;
         }
 
@@ -192,7 +194,7 @@
             width: 60px;
             height: 60px;
             background: #042038;
-            color: #E4DEE1;
+            color: #F5F5F4;
             border-radius: 15px;
             display: flex;
             align-items: center;
@@ -220,7 +222,7 @@
         .how-it-works {
             padding: 100px 0;
             background: #042038;
-            color: #E4DEE1;
+            color: #F5F5F4;
         }
 
         .steps {
@@ -270,6 +272,96 @@
             opacity: 0.9;
         }
 
+        /* Navigation Styles */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(228, 222, 225, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(14, 3, 0, 0.1);
+            z-index: 1000;
+            padding: 15px 0;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .nav-logo img {
+            height: 40px;
+            width: 40px;
+            object-fit: contain;
+        }
+
+        .nav-logo span {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #640D14;
+        }
+
+        .nav-download-btn {
+            background: #22C55E;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .nav-download-btn:hover {
+            background: #16A34A;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(34, 197, 94, 0.3);
+        }
+
+        /* Footer Styles */
+        .footer {
+            background: #0E0300;
+            color: #F5F5F4;
+            padding: 60px 0 30px;
+            text-align: center;
+        }
+
+        .footer h3 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: #640D14;
+        }
+
+        .footer p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .footer-download {
+            margin-bottom: 40px;
+        }
+
+        .footer-links {
+            border-top: 1px solid rgba(228, 222, 225, 0.2);
+            padding-top: 30px;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .hero-content {
@@ -295,11 +387,35 @@
             .steps {
                 grid-template-columns: 1fr;
             }
+
+            .nav-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-logo span {
+                font-size: 1.2rem;
+            }
+
+            body {
+                padding-top: 120px;
+            }
         }
        
     </style>
 </head>
 <body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="logo2.png" alt="ENSEMBL Logo">
+                <span>ENSEMBL</span>
+            </div>
+            <button onclick="document.getElementById('footer').scrollIntoView({behavior: 'smooth'});" class="nav-download-btn">
+                Download Now
+            </button>
+        </div>
+    </nav>
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
@@ -442,6 +558,32 @@
             </div>
         </div>
     </section>
+
+    <!-- Footer Section -->
+    <footer id="footer" class="footer">
+        <div class="container">
+            <!-- <h3>Get ENSEMBL Today</h3>
+            <p>Transform your daily outfit struggles into effortless style confidence</p>
+            
+            <div class="footer-download">
+                <div class="download-wrapper" style="justify-content: center;">
+                    <a href="#" class="download-btn" onclick="downloadApp()">
+                        <div class="app-icon">
+                            <img src="logo1.png" alt="ENSEMBL Logo" style="width: 100%; height: 100%; object-fit: contain;">
+                        </div>
+                        Download ENSEMBL
+                    </a>
+                    <a href="#" onclick="downloadApp()">
+                        <img src="appstore.svg" alt="Download on the App Store" class="store-badge">
+                    </a>
+                </div>
+            </div>
+             -->
+            <div class="footer-links">
+                <p>&copy; 2025 ENSEMBL AI. All rights reserved. | <a href="contact.html" style="color: #640D14; text-decoration: none;">Contact Us</a></p>
+            </div>
+        </div>
+    </footer>
 
     <script>
         function downloadApp() {
