@@ -90,6 +90,67 @@
                 padding: 18px 6px;
             }
         }
+
+        /* Footer Styles */
+        .footer {
+            background: #0E0300;
+            color: #F5F5F4;
+            padding: 40px 0 20px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .footer-links {
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+        
+        .footer-links a {
+            color: #640D14;
+            text-decoration: none;
+        }
+
+        /* Cookie Banner */
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(14, 3, 0, 0.9);
+            color: #F5F5F4;
+            padding: 20px;
+            text-align: center;
+            z-index: 1001;
+            display: none; /* Hidden by default */
+            backdrop-filter: blur(5px);
+            font-size: 0.9rem;
+        }
+
+        .cookie-banner p {
+            margin: 0;
+            margin-bottom: 10px;
+        }
+
+        .cookie-banner a {
+            color: #640D14;
+            text-decoration: underline;
+        }
+
+        .cookie-btn {
+            background: #22C55E;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            margin-left: 15px;
+        }
+        .cookie-btn:hover {
+            background: #16A34A;
+        }
     </style>
 </head>
 <body>
@@ -105,5 +166,38 @@
         </form>
         <a href="index.html" class="back-link">&larr; Back to home</a>
     </div>
+
+    <footer class="footer">
+        <div class="container2" style="margin-top:0; padding:0;">
+             <div class="footer-links">
+                <p style="margin-bottom: 15px; opacity: 0.7;">We may earn commission when you buy through links in our app or on this site.</p>
+                <p>&copy; 2025 ENSEMBL AI. All rights reserved. | <a href="contact.html" style="color: #ededed;">Contact Us</a> | <a href="privacy.html" style="color: #f9f9f9; ">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="cookie-banner" class="cookie-banner">
+        <p>We use cookies and similar technologies to help personalize content, tailor and measure ads, and provide a better experience. By clicking OK or turning an option on in Cookie Preferences, you agree to this, as outlined in our <a href="privacy.html">Cookie Policy</a>.</p>
+        <button id="cookie-accept" class="cookie-btn">Accept</button>
+    </div>
+
+    <script>
+        // Cookie Banner Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const banner = document.getElementById('cookie-banner');
+            const acceptBtn = document.getElementById('cookie-accept');
+
+            if (banner && acceptBtn) {
+                if (!localStorage.getItem('cookieConsent')) {
+                    banner.style.display = 'block';
+                }
+
+                acceptBtn.addEventListener('click', function() {
+                    localStorage.setItem('cookieConsent', 'true');
+                    banner.style.display = 'none';
+                });
+            }
+        });
+    </script>
 </body>
 </html>
