@@ -447,6 +447,13 @@
         .cookie-btn:hover {
             background: #16A34A;
         }
+        .cookie-btn.decline {
+             background: #6c757d;
+             margin-left: 10px;
+        }
+        .cookie-btn.decline:hover {
+             background: #5a6268;
+        }
     </style>
 </head>
 <body>
@@ -635,8 +642,9 @@
     </footer>
 
     <div id="cookie-banner" class="cookie-banner">
-        <p>We use cookies and similar technologies to help personalize content, tailor and measure ads, and provide a better experience. By clicking OK or turning an option on in Cookie Preferences, you agree to this, as outlined in our <a href="privacy.html" style="color: #f9f9f9;">Cookie Policy</a>.</p>
+        <p>We use cookies to improve your experience and for marketing purposes. By clicking “Accept”, you agree to our use of cookies. For more details, see our <a href="privacy.html" style="color: #f9f9f9;">Privacy Policy</a>.</p>
         <button id="cookie-accept" class="cookie-btn">Accept</button>
+        <button id="cookie-decline" class="cookie-btn decline">Decline</button>
     </div>
 
     <script>
@@ -678,14 +686,32 @@
             // Cookie Banner Logic
             const banner = document.getElementById('cookie-banner');
             const acceptBtn = document.getElementById('cookie-accept');
+            const declineBtn = document.getElementById('cookie-decline');
+            const consentStatus = localStorage.getItem('cookieConsent');
 
-            if (banner && acceptBtn) {
-                if (!localStorage.getItem('cookieConsent')) {
+            function loadTrackingScripts() {
+                // IMPORTANT: Add all tracking script initializations here.
+                // For example, Rakuten, Google Analytics, etc.
+                console.log('Tracking scripts would be loaded now.');
+            }
+
+            if (consentStatus === 'true') {
+                loadTrackingScripts();
+            } else if (!consentStatus) {
+                if (banner) {
                     banner.style.display = 'block';
                 }
+            }
 
+            if (banner && acceptBtn && declineBtn) {
                 acceptBtn.addEventListener('click', function() {
                     localStorage.setItem('cookieConsent', 'true');
+                    banner.style.display = 'none';
+                    loadTrackingScripts();
+                });
+
+                declineBtn.addEventListener('click', function() {
+                    localStorage.setItem('cookieConsent', 'false');
                     banner.style.display = 'none';
                 });
             }
